@@ -3,6 +3,7 @@ const authService = require('../services/authService');
 async function register(req, res, next) {
   try {
     const { email, password } = req.body;
+    console.log(req.body.email)
     if (!email || !password) return res.status(400).json({ status:400, message:'Email e senha são obrigatórios', httpCat:'https://http.cat/400' });
 
     const user = await authService.createUser(email, password);

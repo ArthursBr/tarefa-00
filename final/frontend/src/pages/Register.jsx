@@ -7,7 +7,7 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const resp = await fetch('/api/auth/register', {
+    const resp = await fetch('http://localhost:4000/api/auth/register', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ email, password })

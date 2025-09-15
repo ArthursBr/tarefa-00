@@ -7,7 +7,7 @@ export default function Login() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const resp = await fetch('/api/auth/login', {
+    const resp = await fetch('http://localhost:4000/api/auth/login', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ email, password })
